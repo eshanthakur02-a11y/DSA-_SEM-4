@@ -53,7 +53,6 @@ export default {
         },
         neon: {
           green: "hsl(var(--neon-green))",
-          blue: "hsl(var(--neon-blue))",
           purple: "hsl(var(--neon-purple))",
           cyan: "hsl(var(--neon-cyan))",
           pink: "hsl(var(--neon-pink))",
@@ -96,14 +95,6 @@ export default {
           "0%, 100%": { transform: "translateY(0)" },
           "50%": { transform: "translateY(-10px)" },
         },
-        "spin-slow": {
-          from: { transform: "rotate(0deg)" },
-          to: { transform: "rotate(360deg)" },
-        },
-        "pulse-glow": {
-          "0%, 100%": { boxShadow: "0 0 5px hsl(var(--primary) / 0.3)" },
-          "50%": { boxShadow: "0 0 20px hsl(var(--primary) / 0.6), 0 0 40px hsl(var(--primary) / 0.3)" },
-        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
@@ -111,8 +102,6 @@ export default {
         "fade-in": "fade-in 0.6s ease-out forwards",
         "pulse-neon": "pulse-neon 2s ease-in-out infinite",
         float: "float 3s ease-in-out infinite",
-        "spin-slow": "spin-slow 8s linear infinite",
-        "pulse-glow": "pulse-glow 2s ease-in-out infinite",
       },
     },
   },
