@@ -60,6 +60,10 @@ const TowerOfHanoiGame = () => {
           return next;
         });
         setMoves((m) => m + 1);
+      } else {
+        toast.error("Invalid move!", {
+          description: `You can't place a larger disk (${disk}) on a smaller one (${topDisk}).`,
+        });
       }
       setSelected(null);
     }
