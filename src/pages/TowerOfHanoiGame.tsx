@@ -195,7 +195,8 @@ const TowerOfHanoiGame = () => {
                 <div className="absolute bottom-0 h-1 w-36 rounded-full bg-muted-foreground/30" />
                 {/* Disks */}
                 <AnimatePresence>
-                  {rod.map((disk, diskIdx) => {
+                  {[...rod].reverse().map((disk, revIdx) => {
+                    const diskIdx = rod.length - 1 - revIdx;
                     const width =
                       minDiskWidth +
                       ((disk - 1) / (numDisks - 1 || 1)) * (maxDiskWidth - minDiskWidth);
