@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import Layout from "@/components/Layout";
 import { RotateCcw, Play, Minus, Plus } from "lucide-react";
+import { toast } from "sonner";
 
 const COLORS = [
   "hsl(160, 100%, 50%)",
@@ -59,6 +60,10 @@ const TowerOfHanoiGame = () => {
           return next;
         });
         setMoves((m) => m + 1);
+      } else {
+        toast.error("Invalid move!", {
+          description: `You can't place a larger disk (${disk}) on a smaller one (${topDisk}).`,
+        });
       }
       setSelected(null);
     }
